@@ -16,3 +16,7 @@ int main()
   {
    for(i=x;i>0;i=i/2)
    {
+   printf("%d",i);
+   }
+  }
+ }
