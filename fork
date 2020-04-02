@@ -8,3 +8,7 @@ int main()
 {
  pid_t pid = fork();
  if(pid==0)
+ {
+  int x,i;
+  printf("Enter positive number = ");
+  scanf("%d",&x);
