@@ -12,3 +12,7 @@ int main()
   int x,i;
   printf("Enter positive number = ");
   scanf("%d",&x);
+  if(x>0)
+  {
+   for(i=x;i>0;i=i/2)
+   {
