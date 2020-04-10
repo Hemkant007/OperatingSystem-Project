@@ -22,3 +22,12 @@ int main (int argc, char *argv[]) {
       perror("Filecopy: filecopy.exe [target] [destination]. \n");
       exit(1);
     }
+    
+    char* srcFile = argv[1];
+    char* dstFile = argv[2];
+
+    // Attempt to create a pipe.
+    if (pipe(pipeFds) < 0) {
+      printf("Something went wrong creating the pipe! %s\n", strerror(errno));
+      exit(1);
+    }
