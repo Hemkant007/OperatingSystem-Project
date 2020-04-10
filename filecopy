@@ -19,7 +19,7 @@ int main (int argc, char *argv[]) {
     
     // Check if 3 arguments were supplied.
     if (argc != 3) {
-      perror("Filecopy: filecopy.exe [target] [destination]. \n");
+      printf("Filecopy: filecopy.exe [target] [destination]. \n");
       exit(1);
     }
     
