@@ -1,0 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h> // read the number of the last error
+#include <fcntl.h> // file descriptor CONSTANT mode values
