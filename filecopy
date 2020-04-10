@@ -12,3 +12,7 @@ int main (int argc, char *argv[]) {
      * When we create our pipe, we give pipe() this array and it will
      * put the reading[0] and writing[1] file descriptors for the pipe into it.
      */
+    int pipeFds[2]; 
+    int fileBytesLength;
+    char buffer[100];
+    char childBuffer[100];
