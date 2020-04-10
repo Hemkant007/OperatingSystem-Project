@@ -53,5 +53,17 @@ int main (int argc, char *argv[]) {
 
       // If the current process is the parent process.
       // Read the file and send it down to the child process to write.
+      
+      default: 
+        close(pipeFds[0]);                                              // close reading end of pipe downstream.
+        int fileInDesc = open(srcFile, O_RDONLY);                       // Read file into file descriptor
+        ssize_t num_bytes = read(fileInDesc, buffer, sizeof(buffer));   // Get number bytes to read
+        write(pipeFds[1], buffer, num_bytes);                           // Write bytes to child process.
+        close(pipeFds[1]);                                              // Close writing downstream pipe when we're done with it.
+
+    }
+
+    return 0;
+}
     
     
