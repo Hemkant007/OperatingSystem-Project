@@ -4,3 +4,11 @@
 #include <unistd.h>
 #include <errno.h> // read the number of the last error
 #include <fcntl.h> // file descriptor CONSTANT mode values
+
+int main (int argc, char *argv[]) {
+
+    /*
+     * File descriptor array.
+     * When we create our pipe, we give pipe() this array and it will
+     * put the reading[0] and writing[1] file descriptors for the pipe into it.
+     */
